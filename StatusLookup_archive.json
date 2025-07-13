@@ -1,0 +1,80 @@
+{
+  "name": "StatusLookup.archive",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "notion_database_page_id"
+            }
+          ]
+        }
+      },
+      "id": "c6a47213-24bb-498f-8b78-a8d0147555e1",
+      "typeVersion": 1.1,
+      "name": "When Executed by Another Workflow",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "archive",
+        "pageId": {
+          "__rl": true,
+          "value": "={{ $json.notion_database_page_id }}",
+          "mode": "id"
+        }
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "66774be3-9df8-49ba-b1e5-e44bba364765",
+      "name": "Notion",
+      "credentials": {
+        "notionApi": {
+          "id": "Bmt98BNEpJZNKdHB",
+          "name": "Notion account - n8n - Neurvana"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "0c1634b2-0845-42bb-8cd3-ccb3f19be90b",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "536da3f879a4021c2e665004b205ac3248650d186016a9e0b3d1c8661186ceb0"
+  },
+  "id": "4IafyvPR7MzxfEZG",
+  "tags": [
+    {
+      "createdAt": "2025-05-31T18:28:29.259Z",
+      "updatedAt": "2025-05-31T18:28:29.259Z",
+      "id": "2tVpCaOh0Fl70Zb6",
+      "name": "Sub"
+    }
+  ]
+}

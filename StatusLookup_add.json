@@ -1,0 +1,290 @@
+{
+  "name": "StatusLookup.add",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "Priority"
+            },
+            {
+              "name": "Work / Personal"
+            },
+            {
+              "name": "Title"
+            },
+            {
+              "name": "Deadline",
+              "type": "any"
+            },
+            {
+              "name": "Notes"
+            },
+            {
+              "name": "Client"
+            }
+          ]
+        }
+      },
+      "id": "8d3b3a15-d6ca-4c30-9685-146ea77a8750",
+      "typeVersion": 1.1,
+      "name": "When Executed by Another Workflow",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        -920,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d74d2829-f8f6-4e05-b4f9-b455504f1454",
+              "name": "Title",
+              "value": "={{ $('When Executed by Another Workflow').item.json.Title }}",
+              "type": "string"
+            },
+            {
+              "id": "419e2f85-ced4-43bc-ad22-0b3b257a3d91",
+              "name": "Priority",
+              "value": "={{ $('When Executed by Another Workflow').item.json.Priority }}",
+              "type": "string"
+            },
+            {
+              "id": "f8bc6d87-f2ea-42d8-9917-eb4b5228aa91",
+              "name": "Work / Personal",
+              "value": "={{ $('When Executed by Another Workflow').item.json['Work / Personal'] }}",
+              "type": "string"
+            },
+            {
+              "id": "a07d4a33-721d-4fa3-879f-925efe8b2a57",
+              "name": "notes",
+              "value": "={{ $('When Executed by Another Workflow').item.json.notes }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -400,
+        160
+      ],
+      "id": "b8d753d1-7d3d-43f9-bffe-f5b1c7f9bc97",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "206eaae9-17d9-8092-8986-e63bbfcf420a",
+          "mode": "list",
+          "cachedResultName": "StatusLookup.table",
+          "cachedResultUrl": "https://www.notion.so/206eaae917d980928986e63bbfcf420a"
+        },
+        "title": "={{ $json.Title }}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Priority|select",
+              "selectValue": "={{ $json.Priority }}"
+            },
+            {
+              "key": "Work / Personal|select",
+              "selectValue": "={{ $json['Work / Personal'] }}"
+            },
+            {
+              "key": "Deadline|date",
+              "includeTime": false,
+              "date": "={{ $json.formattedDate }}",
+              "timezone": "Europe/London"
+            },
+            {
+              "key": "Client|select",
+              "selectValue": "={{ $json.Client }}"
+            },
+            {
+              "key": "={{ $json.Notes }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        180,
+        160
+      ],
+      "id": "4efd8a89-dc4a-4b99-bb92-dbb597ce3e09",
+      "name": "Notion",
+      "credentials": {
+        "notionApi": {
+          "id": "Bmt98BNEpJZNKdHB",
+          "name": "Notion account - n8n - Neurvana"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $json.Deadline }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        -640,
+        160
+      ],
+      "id": "d1947bf2-4a23-4e04-9f65-ad21c099c660",
+      "name": "Date & Time"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fb641718-cc31-4d72-896b-30686c15bf73",
+              "leftValue": "={{ $('Date & Time').item.json.formattedDate }}",
+              "rightValue": "01/01/1970",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -200,
+        140
+      ],
+      "id": "359d7445-17ab-4672-864e-6a57b3594086",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "94c3013c-6e3f-46f3-b168-d87d59e14bfb",
+              "name": "formattedDate",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "4767c371-7c2e-4307-99b9-94b2bac29f18",
+      "name": "Edit Fields1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "bb47de9c-d0ae-4f38-a086-33851f8bcdb4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "536da3f879a4021c2e665004b205ac3248650d186016a9e0b3d1c8661186ceb0"
+  },
+  "id": "OQ4ZCA1cGBmpUAxZ",
+  "tags": [
+    {
+      "createdAt": "2025-05-31T18:28:29.259Z",
+      "updatedAt": "2025-05-31T18:28:29.259Z",
+      "id": "2tVpCaOh0Fl70Zb6",
+      "name": "Sub"
+    }
+  ]
+}

@@ -1,0 +1,2430 @@
+{
+  "version": {
+    "_version": 13.02,
+    "autoSaveFromRestore": false,
+    "canvasTemplates": [],
+    "components": [],
+    "creatorID": 1009891,
+    "manualSave": false,
+    "model": {},
+    "name": "Initial Version",
+    "platformData": {
+      "slots": [],
+      "intents": [
+        {
+          "key": "None",
+          "name": "None",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        },
+        {
+          "key": "6797c2110cfd6c00ccbedd9f",
+          "name": "No",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "I'm good",
+              "slots": []
+            },
+            {
+              "text": "Nope",
+              "slots": []
+            },
+            {
+              "text": "I think I'm good thanks",
+              "slots": []
+            },
+            {
+              "text": "Definitely not",
+              "slots": []
+            },
+            {
+              "text": "Nope",
+              "slots": []
+            },
+            {
+              "text": "Under no circumstances",
+              "slots": []
+            },
+            {
+              "text": "Not at all",
+              "slots": []
+            },
+            {
+              "text": "Nope, not at all",
+              "slots": []
+            },
+            {
+              "text": "No way",
+              "slots": []
+            },
+            {
+              "text": "By no means",
+              "slots": []
+            },
+            {
+              "text": "Not in the slightest",
+              "slots": []
+            },
+            {
+              "text": "No chance",
+              "slots": []
+            },
+            {
+              "text": "Absolutely not",
+              "slots": []
+            },
+            {
+              "text": "Not at all",
+              "slots": []
+            },
+            {
+              "text": "Negative",
+              "slots": []
+            },
+            {
+              "text": "Sorry, no",
+              "slots": []
+            },
+            {
+              "text": "Definitely not",
+              "slots": []
+            },
+            {
+              "text": "That's wrong",
+              "slots": []
+            },
+            {
+              "text": "Incorrect",
+              "slots": []
+            },
+            {
+              "text": "Nope",
+              "slots": []
+            },
+            {
+              "text": "No",
+              "slots": []
+            }
+          ],
+          "noteID": "5d2ve0l1o",
+          "description": "Trigger this intent then the user responds negatively"
+        },
+        {
+          "key": "6797c2660cfd6c00ccbeddd1",
+          "name": "Yes",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "Definitely",
+              "slots": []
+            },
+            {
+              "text": "Indeed",
+              "slots": []
+            },
+            {
+              "text": "Of course",
+              "slots": []
+            },
+            {
+              "text": "Certainly",
+              "slots": []
+            },
+            {
+              "text": "Without question",
+              "slots": []
+            },
+            {
+              "text": "Sure",
+              "slots": []
+            },
+            {
+              "text": "Definitely",
+              "slots": []
+            },
+            {
+              "text": "You bet",
+              "slots": []
+            },
+            {
+              "text": "Without a doubt",
+              "slots": []
+            },
+            {
+              "text": "By all means",
+              "slots": []
+            },
+            {
+              "text": "Agreed",
+              "slots": []
+            },
+            {
+              "text": "Absolutely",
+              "slots": []
+            },
+            {
+              "text": "That's correct",
+              "slots": []
+            },
+            {
+              "text": "Indeed",
+              "slots": []
+            },
+            {
+              "text": "Affirmative",
+              "slots": []
+            },
+            {
+              "text": "You are right",
+              "slots": []
+            },
+            {
+              "text": "Correct",
+              "slots": []
+            },
+            {
+              "text": "Yep",
+              "slots": []
+            },
+            {
+              "text": "Yes",
+              "slots": []
+            }
+          ],
+          "noteID": "5d2vf0l8h",
+          "description": "Trigger this intent when the user responds positively."
+        }
+      ],
+      "settings": {
+        "restart": true,
+        "repeat": 100,
+        "locales": [
+          "en-US"
+        ],
+        "globalNoMatch": {
+          "type": "static",
+          "prompt": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Sorry, I didn’t get that. Please try again."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "messageDelay": {
+          "durationMilliseconds": 500
+        },
+        "defaultVoice": "elevenlabs:eleven_turbo_v2_5:FGY2WhTYpPnrIDTdsKH5",
+        "deepgramASR": {
+          "silenceWaitMS": 10,
+          "punctuationWaitMS": 1000,
+          "partialWaitMS": 1500,
+          "interruptionWaitWords": 2,
+          "audioCue": null
+        }
+      },
+      "publishing": {
+        "avatar": "https://cdn.voiceflow.com/assets/logo.png",
+        "color": "#397DFF",
+        "description": "Hi, how can I help you today?",
+        "feedback": false,
+        "image": "https://cdn.voiceflow.com/assets/logo.png",
+        "persistence": "localStorage",
+        "position": "right",
+        "spacing": {
+          "side": 24,
+          "bottom": 24
+        },
+        "title": "Your AI agent",
+        "watermark": true,
+        "audioInterface": true
+      },
+      "platform": "webchat"
+    },
+    "programResources": {
+      "agents": {
+        "67db2b56cbe88befffef4623": {
+          "settings": {
+            "model": "gpt-4o",
+            "maxTokens": 512,
+            "temperature": 0.3
+          },
+          "apiTools": [],
+          "pathTools": [
+            {
+              "id": "68386886fec05eb67a75cce2",
+              "name": "post_chatInput",
+              "variables": [
+                {
+                  "name": "chatInput",
+                  "required": true,
+                  "description": null
+                }
+              ],
+              "description": "chatInput has been defined and ready to post"
+            },
+            {
+              "id": "6840ac38a1577b62095d131d",
+              "name": "goto_InstructionAgent",
+              "variables": [
+                {
+                  "name": "vf_confirmFollowup",
+                  "required": true,
+                  "description": null
+                }
+              ],
+              "description": "this path allows the user to alert the assignee(s) of the action via slack"
+            }
+          ],
+          "description": "This agent helps users check the status of tasks related to specific clients. It captures natural-language questions and sends them to an automation system (Make) to retrieve structured answers.",
+          "instructions": "Your role is to handle task-related questions by forwarding them to an external system.\r\n\r\nGreet the guest and ask which task they are inquiring about.\nWhen the guest sends a message:\r\n1. Save their full input in the variable {chatInput} \r\n2. Do not answer or summarize the question yourself.\r\n3. Immediately call the tool post_chat_input, sending chatInput\r\n4. Respond with the return of {Neurvana_StatusLookup_Response} \n\n5. When responsible for responding to user questions about tasks,\nDo not ask to contact the assignee after every response.\nOnly suggest following up when it makes contextual sense, such as:\nThe task is incomplete, overdue, or marked as blocked\nThe user hints at next steps, frustration, or needing action taken\n\nIf you do offer to follow up, use natural language based on the situation.\nAvoid repeating the offer too often in a single conversation.\nOnly offer it once per interaction unless clearly re-prompted by the user.\n\nIf the user agrees to follow up:\nSet {vf_confirmFollowup} to true\nActivate the goto_InstructionAgent path\n\r\r\nDo not attempt to answer questions directly from your own knowledge.",
+          "functionTools": [],
+          "webSearchTool": null,
+          "integrationTools": [],
+          "knowledgeBaseTool": {
+            "enabled": false,
+            "description": "Triggered the knowledge base when you don't know the answer to a question."
+          },
+          "buttonTool": null,
+          "cardTool": null,
+          "carouselTool": null
+        },
+        "6840ae2aa1577b62095d13af": {
+          "settings": {
+            "model": "gpt-4o",
+            "maxTokens": 512,
+            "temperature": 0.3
+          },
+          "apiTools": [],
+          "pathTools": [
+            {
+              "id": "6840b5a9a1577b62095d18f6",
+              "name": "post_instruction",
+              "variables": [
+                {
+                  "name": "vf_assigned",
+                  "required": true,
+                  "description": "the name or ID of the task assignee (or group) receiving the instruction."
+                },
+                {
+                  "name": "vf_followupMessage",
+                  "required": true,
+                  "description": null
+                },
+                {
+                  "name": "vf_client",
+                  "required": true,
+                  "description": "the name of the client regarding this task"
+                },
+                {
+                  "name": "vf_task",
+                  "required": true,
+                  "description": "the task which is the focus of this action"
+                }
+              ],
+              "description": "This path is triggered when vf_actionType is set to followup_instruction.\n\nRequired Variables:\n\nvf_followupTarget: the name or ID of the task assignee (or group) receiving the instruction.\n\nvf_followupMessage: the content of the message intended for the assignee.\n\nInstructions:\nEnsure both variables are populated before calling the webhook. The payload will be sent to n8n for further processing, where it will be formatted and delivered to the appropriate Slack channel or user."
+            },
+            {
+              "id": "684591bd21aa636e4516f42e",
+              "name": "returnto_taskQueryAgent",
+              "variables": [],
+              "description": "the guest wants to inquire about another task"
+            }
+          ],
+          "description": "Handles user-approved follow-up requests by delivering Slack messages to the assigned team member(s) regarding a specific task or client. Triggered by another agent after task lookup confirmation.",
+          "instructions": "You are responsible for forwarding follow-up instructions to task assignees through an external system (n8n), which handles Slack delivery.\n\rYour role is not to interpret or modify the instruction message—only to relay it.\n\nWhen this agent is activated:\r\n1. Expect the following required variables:\r\n vf_actionType = followup_instruction\n{vf_followupMessage}: the content of the message to send\n\r{vf_client} : the client regarding this task\n{vf_task} : the task which is the focus of this action\n{vf_assigned}: the name, group, or Slack handle of the recipient\r\r\n\r2. Immediately call the tool post_instruction using the input variables provided.\r\n\r\n\rStrict Rules:\nDo not modify, analyze, or interpret the message content.\nDo not answer unrelated questions or respond from your own knowledge.\nDo not initiate new tasks, lookups, or actions beyond this message dispatch.\n\nPost-Instruction Wrap-Up\nAfter {followup_return} confirms the message was delivered, acknowledge the action in a conversational tone. Then, if it feels appropriate, offer to help with another task.\nIf the user shows interest in continuing, follow the returnto_taskQueryAgent path.\nIf not, politely end the conversation.",
+          "functionTools": [],
+          "webSearchTool": null,
+          "integrationTools": [],
+          "knowledgeBaseTool": {
+            "enabled": false,
+            "description": "Trigger the knowledge base when you don't know the answer to a question."
+          },
+          "buttonTool": null,
+          "cardTool": null,
+          "carouselTool": null
+        }
+      },
+      "prompts": {},
+      "apiTools": {},
+      "messages": {},
+      "integrationTools": {}
+    },
+    "prototype": {
+      "type": "chat",
+      "data": {
+        "name": "StatusLookup",
+        "locales": [
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [],
+        "slots": []
+      },
+      "context": {
+        "stack": [
+          {
+            "diagramID": "64dbb6696a8fab0013dba194",
+            "storage": {},
+            "variables": {}
+          }
+        ],
+        "variables": {}
+      },
+      "surveyorContext": {
+        "nonDraftResponsesMap": {},
+        "responseMessagesByDiscriminatorIDMap": {},
+        "responseDiscriminatorsByResponseIDMap": {},
+        "functionDefinitions": {},
+        "referencedResponseIDs": [],
+        "referencedAgentsIDs": [
+          "67db2b56cbe88befffef4623",
+          "6840ae2aa1577b62095d13af"
+        ],
+        "referencedAPIToolIDs": [],
+        "referencedIntegrationToolIDs": [],
+        "slotsMap": {},
+        "platform": "webchat",
+        "products": {},
+        "extraSlots": [],
+        "interfaces": [],
+        "permissions": [],
+        "projectType": "chat",
+        "extraIntents": [],
+        "usedEventsSet": [],
+        "usedIntentsSet": [],
+        "goToIntentsSet": [],
+        "entitiesMap": {},
+        "variableMap": {},
+        "intentsMap": {},
+        "requiredEntitiesMap": {},
+        "eventsMap": {},
+        "cmsVariables": {
+          "chatInput": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "the users query",
+            "defaultValue": null
+          },
+          "sessions": {
+            "isSystem": true,
+            "description": "The number of times a particular user has opened the app.",
+            "defaultValue": null
+          },
+          "user_id": {
+            "isSystem": true,
+            "description": "The user's unique ID.",
+            "defaultValue": null
+          },
+          "timestamp": {
+            "isSystem": true,
+            "description": "UNIX timestamp (number of seconds since January 1st, 1970 at UTC).",
+            "defaultValue": null
+          },
+          "platform": {
+            "isSystem": true,
+            "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+            "defaultValue": null
+          },
+          "locale": {
+            "isSystem": true,
+            "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+            "defaultValue": null
+          },
+          "intent_confidence": {
+            "isSystem": true,
+            "description": "The confidence interval (measured as a value from 0 to 100) for the most recently matched intent.",
+            "defaultValue": null
+          },
+          "last_response": {
+            "isSystem": true,
+            "description": "The agent's last response (text/speak) in a string.",
+            "defaultValue": null
+          },
+          "last_event": {
+            "isSystem": true,
+            "description": "The object containing the last event that the user client has triggered.",
+            "defaultValue": null
+          },
+          "last_utterance": {
+            "isSystem": true,
+            "description": "The user's last utterance in a text string.",
+            "defaultValue": null
+          },
+          "vf_memory": {
+            "isSystem": true,
+            "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+            "defaultValue": null
+          },
+          "Neurvana_StatusLookup_Response": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "response from the Status Lookup n8n Agent",
+            "defaultValue": ""
+          },
+          "vf_confirmFollowup": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "confirm followup regarding this task",
+            "defaultValue": "false"
+          },
+          "vf_assigned": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "vf_followupMessage": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "the content of the message intended for the assignee.",
+            "defaultValue": null
+          },
+          "vf_client": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "vf_task": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "followup_return": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          }
+        },
+        "cmsEntities": {}
+      },
+      "settings": {},
+      "platform": "webchat"
+    },
+    "settings": {
+      "memory": {
+        "turns": 25
+      },
+      "intentClassification": {
+        "type": "rag",
+        "params": {
+          "model": "claude-3.5-haiku",
+          "temperature": 0.1
+        },
+        "promptWrapper": null
+      },
+      "voice": {
+        "failureMessage": "We’re sorry, but the call cannot be completed at this time. Please try again later.",
+        "hasCallRecording": false,
+        "tts": {
+          "provider": "elevenlabs",
+          "voice": "FGY2WhTYpPnrIDTdsKH5",
+          "model": "eleven_turbo_v2_5",
+          "settings": {}
+        }
+      },
+      "globalNoMatch": {
+        "type": "static",
+        "prompt": [
+          {
+            "text": [
+              "Sorry, I didn’t get that. Please try again."
+            ]
+          }
+        ]
+      },
+      "widget": {
+        "chat": {
+          "voiceInput": true,
+          "voiceOutput": true,
+          "renderMode": "embed",
+          "headerImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1749395187703-img.neon.lotus.1024.sq.png"
+          },
+          "agentImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1749395580666-vecteezy_free-icon-idea_53066879.png"
+          },
+          "banner": {
+            "enabled": true,
+            "title": "Task Lookup & Team Instruction",
+            "description": "Ask about task progress & relay new instructions. ",
+            "imageURL": "https://cm4-production-assets.s3.amazonaws.com/1749395609834-vecteezy_free-icon-peoplr_53066904.png"
+          },
+          "placeholderText": "Message...",
+          "aiDisclaimer": {
+            "enabled": false,
+            "text": "Generated by AI, double-check for accuracy."
+          },
+          "disclaimer": {
+            "enabled": false,
+            "title": "Privacy notice",
+            "description": "Before we can proceed with your conversation, we kindly ask you to review and accept our privacy policy, outlining how we handle and protect your personal information throughout our services.",
+            "primaryButtonText": "Submit",
+            "secondaryButtonText": "Privacy policy",
+            "secondaryButtonURL": ""
+          },
+          "handoffToAgentImageURL": ""
+        },
+        "common": {
+          "fontFamily": "Roboto",
+          "launcher": {
+            "text": "Test your agent",
+            "type": "icon",
+            "imageURL": null
+          },
+          "poweredBy": false,
+          "footerLink": {
+            "enabled": false
+          },
+          "position": "right",
+          "sideSpacing": "20",
+          "bottomSpacing": "20",
+          "primaryColor": {
+            "color": "#3D1B53",
+            "palette": {
+              "50": "#F4ECF9",
+              "100": "#E8D9F2",
+              "200": "#D2B2E6",
+              "300": "#BB8CD9",
+              "400": "#A465CD",
+              "500": "#8D3FC0",
+              "600": "#71329A",
+              "700": "#552673",
+              "800": "#39194D",
+              "900": "#1C0D26"
+            }
+          },
+          "persistence": "localStorage"
+        },
+        "security": {
+          "approvedDomains": {
+            "enabled": false,
+            "domains": ""
+          },
+          "disableTranscript": false
+        },
+        "type": "chat",
+        "voice": {
+          "renderMode": "full",
+          "content": {
+            "callToActionText": "How can I help you?",
+            "startButtonText": "Start a call",
+            "listeningText": "Listening...",
+            "talkingText": "Talk to interrupt",
+            "endButtonText": "End"
+          }
+        }
+      }
+    },
+    "topics": [
+      {
+        "type": "DIAGRAM",
+        "sourceID": "64dbb6696a8fab0013dba194"
+      }
+    ],
+    "variables": [
+      "chatInput",
+      "sessions",
+      "user_id",
+      "timestamp",
+      "platform",
+      "locale",
+      "intent_confidence",
+      "last_response",
+      "last_event",
+      "last_utterance",
+      "vf_memory",
+      "Neurvana_StatusLookup_Response",
+      "vf_confirmFollowup",
+      "vf_assigned",
+      "vf_followupMessage",
+      "vf_client",
+      "vf_task",
+      "followup_return"
+    ],
+    "_id": "68384a0c4e4dc0e4ff1c6a30",
+    "updatedAt": "2025-06-10T21:14:34.130Z",
+    "publishedAt": "2024-09-27T16:54:27.996Z",
+    "domains": [
+      {
+        "id": "cla06iyr900b206pkh8d4ap8n",
+        "name": "Home",
+        "live": true,
+        "topicIDs": [
+          "64dbb6696a8fab0013dba194"
+        ],
+        "rootDiagramID": "64dbb6696a8fab0013dba194",
+        "updatedBy": 1009891,
+        "updatedAt": "2025-05-29T11:50:36.968Z"
+      }
+    ],
+    "projectID": "68384a0c4e4dc0e4ff1c6a2f",
+    "rootDiagramID": "64dbb6696a8fab0013dba194",
+    "templateDiagramID": "64dbb6696a8fab0013dba195"
+  },
+  "diagrams": {
+    "64dbb6696a8fab0013dba195": {
+      "name": "Template Diagram",
+      "type": "TEMPLATE",
+      "zoom": 100,
+      "nodes": {},
+      "offsetX": 0,
+      "offsetY": 0,
+      "modified": 1701833501,
+      "creatorID": 1009891,
+      "variables": [],
+      "menuItems": [],
+      "_id": "68384a0c4e4dc0e4ff1c6a32",
+      "diagramID": "64dbb6696a8fab0013dba195",
+      "versionID": "68384a0c4e4dc0e4ff1c6a30"
+    },
+    "64dbb6696a8fab0013dba194": {
+      "name": "ROOT",
+      "type": "TOPIC",
+      "zoom": 72.79783312818648,
+      "nodes": {
+        "start00000000000000000000": {
+          "type": "start",
+          "data": {
+            "name": "Start",
+            "color": "#ce80cc",
+            "steps": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "67db2b51c6c175f16d898091",
+                  "id": "6032afcf359e8c14c06c0319",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          161.07,
+                          -141.54
+                        ]
+                      },
+                      {
+                        "point": [
+                          185.07,
+                          -141.54
+                        ]
+                      },
+                      {
+                        "point": [
+                          185.07,
+                          -74
+                        ]
+                      },
+                      {
+                        "point": [
+                          98.83,
+                          -74
+                        ]
+                      },
+                      {
+                        "point": [
+                          98.83,
+                          -6.47
+                        ],
+                        "toTop": true,
+                        "allowedToTop": true
+                      }
+                    ],
+                    "color": "#ce80cc"
+                  }
+                }
+              },
+              "dynamic": []
+            },
+            "label": "Start",
+            "triggers": []
+          },
+          "nodeID": "start00000000000000000000",
+          "coords": [
+            96.73499312525291,
+            -157.28547331703086
+          ]
+        },
+        "67db2b51c6c175f16d898090": {
+          "type": "agent",
+          "data": {
+            "name": "Untitled agent",
+            "agentID": "67db2b56cbe88befffef4623",
+            "listenForOtherTriggers": false,
+            "exitEveryConversationalTurn": false,
+            "portsV2": {
+              "byKey": {
+                "68386886fec05eb67a75cce2": {
+                  "id": "68386885d95cd327eab5d98a",
+                  "target": "6838693dd95cd327eab5d98c",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          264.83,
+                          191.53
+                        ]
+                      },
+                      {
+                        "point": [
+                          438.36,
+                          191.53
+                        ]
+                      },
+                      {
+                        "point": [
+                          438.36,
+                          371.23
+                        ]
+                      },
+                      {
+                        "point": [
+                          414.36,
+                          371.23
+                        ],
+                        "reversed": true,
+                        "allowedToTop": false
+                      }
+                    ],
+                    "color": "#5b9fd7"
+                  }
+                },
+                "6840ac38a1577b62095d131d": {
+                  "id": "6840ac3977e599a05ebd2bc1",
+                  "target": "6840adf777e599a05ebd2bc3",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          264.83,
+                          245.53
+                        ]
+                      },
+                      {
+                        "point": [
+                          320.7,
+                          245.53
+                        ]
+                      },
+                      {
+                        "point": [
+                          320.7,
+                          -89.05
+                        ]
+                      },
+                      {
+                        "point": [
+                          376.56,
+                          -89.05
+                        ],
+                        "allowedToTop": false
+                      }
+                    ],
+                    "color": "#ce80cc"
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67db2b51c6c175f16d898090",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "67db2b51c6c175f16d898091": {
+          "type": "block",
+          "data": {
+            "name": "Task Query Agent",
+            "steps": [
+              "67db2b51c6c175f16d898090"
+            ],
+            "color": "#75a0bf"
+          },
+          "nodeID": "67db2b51c6c175f16d898091",
+          "coords": [
+            98.83213479415839,
+            -6.472481779302143
+          ]
+        },
+        "6838693dd95cd327eab5d98c": {
+          "type": "api-v2",
+          "data": {
+            "name": "",
+            "url": [
+              {
+                "text": [
+                  "https://neurvana.app.n8n.cloud/webhook/0f20519f-8937-42a5-88ee-a8dfd4b9cbfc"
+                ]
+              }
+            ],
+            "headers": [],
+            "httpMethod": "post",
+            "queryParameters": [],
+            "responseMappings": [
+              {
+                "id": "cmbickvuk00xg357vfnc20hwb",
+                "path": "Neurvana_StatusLookup_Response",
+                "variableID": "6840934ba1577b62095d0372"
+              }
+            ],
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "67db2b51c6c175f16d898091",
+                  "id": "6838693dd95cd327eab5d98d",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          82.36,
+                          396.23
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          -90.17,
+                          396.23
+                        ]
+                      },
+                      {
+                        "point": [
+                          -90.17,
+                          20.53
+                        ]
+                      },
+                      {
+                        "point": [
+                          -66.17,
+                          20.53
+                        ],
+                        "allowedToTop": true
+                      }
+                    ],
+                    "color": "#5b9fd7"
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "6838693dd95cd327eab5d98e"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "body": {
+              "type": "raw-input",
+              "contentType": "json",
+              "content": [
+                "{\n  \"vf_actionType\":\"task_lookup\",\n  \"chatInput\": \"",
+                {
+                  "variableID": "683868fbfec05eb67a75cd4d"
+                },
+                "\"\n}"
+              ]
+            }
+          },
+          "nodeID": "6838693dd95cd327eab5d98c"
+        },
+        "6838693dd95cd327eab5d98f": {
+          "type": "block",
+          "data": {
+            "name": "post_chatInput",
+            "steps": [
+              "6838693dd95cd327eab5d98c"
+            ],
+            "color": "#5b9fd7"
+          },
+          "nodeID": "6838693dd95cd327eab5d98f",
+          "coords": [
+            248.35716953017635,
+            292.2342564238682
+          ]
+        },
+        "6840adf777e599a05ebd2bc3": {
+          "type": "agent",
+          "data": {
+            "name": "Untitled agent",
+            "agentID": "6840ae2aa1577b62095d13af",
+            "listenForOtherTriggers": false,
+            "exitEveryConversationalTurn": false,
+            "portsV2": {
+              "byKey": {
+                "6840b5a9a1577b62095d18f6": {
+                  "id": "6840b5aa77e599a05ebd2bce",
+                  "target": "6841cd5e77e599a05ebd2bde",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          708.56,
+                          29.95
+                        ]
+                      },
+                      {
+                        "point": [
+                          812.56,
+                          29.95
+                        ]
+                      },
+                      {
+                        "point": [
+                          812.56,
+                          218.63
+                        ]
+                      },
+                      {
+                        "point": [
+                          788.56,
+                          218.63
+                        ],
+                        "reversed": true,
+                        "allowedToTop": false
+                      }
+                    ],
+                    "color": "#56b365"
+                  }
+                },
+                "684591bd21aa636e4516f42e": {
+                  "id": "684591bf1a4a494ed2ebb8ff",
+                  "target": "67db2b51c6c175f16d898091",
+                  "type": "",
+                  "data": {
+                    "color": "#ce80cc",
+                    "points": [
+                      {
+                        "point": [
+                          376.56,
+                          83.95
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          320.2,
+                          83.95
+                        ]
+                      },
+                      {
+                        "point": [
+                          320.2,
+                          20.53
+                        ]
+                      },
+                      {
+                        "point": [
+                          263.83,
+                          20.53
+                        ],
+                        "reversed": true,
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "6840adf777e599a05ebd2bc3",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "6840adf777e599a05ebd2bc4": {
+          "type": "block",
+          "data": {
+            "name": "Instruction Agent",
+            "steps": [
+              "6840adf777e599a05ebd2bc3"
+            ],
+            "color": "#56b365"
+          },
+          "nodeID": "6840adf777e599a05ebd2bc4",
+          "coords": [
+            542.5612983463054,
+            -168.0533389800606
+          ]
+        },
+        "6841cd5e77e599a05ebd2bde": {
+          "type": "api-v2",
+          "data": {
+            "name": "",
+            "url": [
+              {
+                "text": [
+                  "https://neurvana.app.n8n.cloud/webhook/0f20519f-8937-42a5-88ee-a8dfd4b9cbfc"
+                ]
+              }
+            ],
+            "headers": [],
+            "httpMethod": "post",
+            "queryParameters": [],
+            "responseMappings": [
+              {
+                "id": "cmbjqohwu05hb357vnugr12ze",
+                "path": "return",
+                "variableID": "6841e90216b014641261bef7"
+              }
+            ],
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "6840adf777e599a05ebd2bc4",
+                  "id": "6841cd5e77e599a05ebd2bdf",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          456.56,
+                          243.63
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          353.56,
+                          243.63
+                        ]
+                      },
+                      {
+                        "point": [
+                          353.56,
+                          -141.05
+                        ]
+                      },
+                      {
+                        "point": [
+                          377.56,
+                          -141.05
+                        ],
+                        "allowedToTop": true
+                      }
+                    ],
+                    "color": "#56b365"
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "6841cd5e77e599a05ebd2be0"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "body": {
+              "type": "raw-input",
+              "contentType": "json",
+              "content": [
+                "{\n\"vf_actionType\":\"followup_instruction\",\n  \"vf_followupMessage\": \"",
+                {
+                  "variableID": "6841816e060c885ccc1a0d7f"
+                },
+                "\",\n  \"vf_client\": \"",
+                {
+                  "variableID": "6841cee5ac02b1dd9a5f17ae"
+                },
+                "\",\n  \"vf_task\": \"",
+                {
+                  "variableID": "6841cf18ac02b1dd9a5f17f5"
+                },
+                "\",\n  \"vf_assigned\": \"",
+                {
+                  "variableID": "68418143060c885ccc1a0d51"
+                },
+                "\"\n}"
+              ]
+            }
+          },
+          "nodeID": "6841cd5e77e599a05ebd2bde"
+        },
+        "6841cd5e77e599a05ebd2be1": {
+          "type": "block",
+          "data": {
+            "name": "post_instruction",
+            "steps": [
+              "6841cd5e77e599a05ebd2bde"
+            ],
+            "color": "#56b365"
+          },
+          "nodeID": "6841cd5e77e599a05ebd2be1",
+          "coords": [
+            622.5613403320312,
+            139.6343536376953
+          ]
+        }
+      },
+      "offsetX": 535.2415015971587,
+      "offsetY": 347.7660619051573,
+      "modified": 1701833501,
+      "creatorID": 1009891,
+      "variables": [],
+      "menuItems": [
+        {
+          "type": "NODE",
+          "sourceID": "start00000000000000000000"
+        }
+      ],
+      "menuNodeIDs": [],
+      "intentStepIDs": [],
+      "_id": "68384a0c4e4dc0e4ff1c6a33",
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "versionID": "68384a0c4e4dc0e4ff1c6a30"
+    }
+  },
+  "flows": [],
+  "entities": [],
+  "entityVariants": [],
+  "intents": [
+    {
+      "id": "None",
+      "name": "None",
+      "createdByID": 1009891,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedd9f",
+      "name": "No",
+      "createdByID": 1009891,
+      "folderID": null,
+      "description": "Trigger this intent then the user responds negatively",
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd1",
+      "name": "Yes",
+      "createdByID": 1009891,
+      "folderID": null,
+      "description": "Trigger this intent when the user responds positively.",
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    }
+  ],
+  "utterances": [
+    {
+      "id": "6797c2110cfd6c00ccbedda0",
+      "text": [
+        {
+          "text": [
+            "I'm good"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda1",
+      "text": [
+        {
+          "text": [
+            "Nope"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda2",
+      "text": [
+        {
+          "text": [
+            "I think I'm good thanks"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda3",
+      "text": [
+        {
+          "text": [
+            "Definitely not"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda4",
+      "text": [
+        {
+          "text": [
+            "Nope"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda5",
+      "text": [
+        {
+          "text": [
+            "Under no circumstances"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda6",
+      "text": [
+        {
+          "text": [
+            "Not at all"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda7",
+      "text": [
+        {
+          "text": [
+            "Nope, not at all"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda8",
+      "text": [
+        {
+          "text": [
+            "No way"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda9",
+      "text": [
+        {
+          "text": [
+            "By no means"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddaa",
+      "text": [
+        {
+          "text": [
+            "Not in the slightest"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddab",
+      "text": [
+        {
+          "text": [
+            "No chance"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddac",
+      "text": [
+        {
+          "text": [
+            "Absolutely not"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddad",
+      "text": [
+        {
+          "text": [
+            "Not at all"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddae",
+      "text": [
+        {
+          "text": [
+            "Negative"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddaf",
+      "text": [
+        {
+          "text": [
+            "Sorry, no"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb0",
+      "text": [
+        {
+          "text": [
+            "Definitely not"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb1",
+      "text": [
+        {
+          "text": [
+            "That's wrong"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb2",
+      "text": [
+        {
+          "text": [
+            "Incorrect"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb3",
+      "text": [
+        {
+          "text": [
+            "Nope"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb4",
+      "text": [
+        {
+          "text": [
+            "No"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd2",
+      "text": [
+        {
+          "text": [
+            "Definitely"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd3",
+      "text": [
+        {
+          "text": [
+            "Indeed"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd4",
+      "text": [
+        {
+          "text": [
+            "Of course"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd5",
+      "text": [
+        {
+          "text": [
+            "Certainly"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd6",
+      "text": [
+        {
+          "text": [
+            "Without question"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd7",
+      "text": [
+        {
+          "text": [
+            "Sure"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd8",
+      "text": [
+        {
+          "text": [
+            "Definitely"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd9",
+      "text": [
+        {
+          "text": [
+            "You bet"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddda",
+      "text": [
+        {
+          "text": [
+            "Without a doubt"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddb",
+      "text": [
+        {
+          "text": [
+            "By all means"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddc",
+      "text": [
+        {
+          "text": [
+            "Agreed"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddd",
+      "text": [
+        {
+          "text": [
+            "Absolutely"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddde",
+      "text": [
+        {
+          "text": [
+            "That's correct"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddf",
+      "text": [
+        {
+          "text": [
+            "Indeed"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedde0",
+      "text": [
+        {
+          "text": [
+            "Affirmative"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedde1",
+      "text": [
+        {
+          "text": [
+            "You are right"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c3060cfd6c00ccbede5c",
+      "text": [
+        {
+          "text": [
+            "Correct"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c3080cfd6c00ccbede5d",
+      "text": [
+        {
+          "text": [
+            "Yep"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    },
+    {
+      "id": "6797c3090cfd6c00ccbede5e",
+      "text": [
+        {
+          "text": [
+            "Yes"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-05-29T11:50:37.000Z"
+    }
+  ],
+  "requiredEntities": [],
+  "folders": [],
+  "responses": [],
+  "responseMessages": [],
+  "responseDiscriminators": [],
+  "variables": [
+    {
+      "id": "683868fbfec05eb67a75cd4d",
+      "name": "chatInput",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#5B9FD7",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "the users query",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T14:02:36.000Z",
+      "updatedAt": "2025-06-04T17:19:41.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "sessions",
+      "name": "sessions",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The number of times a particular user has opened the app.",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "user_id",
+      "name": "user_id",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's unique ID.",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "timestamp",
+      "name": "timestamp",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "UNIX timestamp (number of seconds since January 1st, 1970 at UTC).",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "platform",
+      "name": "platform",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "locale",
+      "name": "locale",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "intent_confidence",
+      "name": "intent_confidence",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The confidence interval (measured as a value from 0 to 100) for the most recently matched intent.",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "last_response",
+      "name": "last_response",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The agent's last response (text/speak) in a string.",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "last_event",
+      "name": "last_event",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "any",
+      "description": "The object containing the last event that the user client has triggered.",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "last_utterance",
+      "name": "last_utterance",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's last utterance in a text string.",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "vf_memory",
+      "name": "vf_memory",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+      "defaultValue": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-05-29T11:50:37.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "6840934ba1577b62095d0372",
+      "name": "Neurvana_StatusLookup_Response",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#ce80cc",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "response from the Status Lookup n8n Agent",
+      "defaultValue": "",
+      "createdAt": "2025-06-04T18:41:16.000Z",
+      "updatedAt": "2025-06-04T19:11:16.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "6840ad68a1577b62095d137b",
+      "name": "vf_confirmFollowup",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#5B9FD7",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "confirm followup regarding this task",
+      "defaultValue": "false",
+      "createdAt": "2025-06-04T20:32:41.000Z",
+      "updatedAt": "2025-06-04T20:33:21.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "68418143060c885ccc1a0d51",
+      "name": "vf_assigned",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#5B9FD7",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T11:36:36.000Z",
+      "updatedAt": "2025-06-05T17:07:12.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "6841816e060c885ccc1a0d7f",
+      "name": "vf_followupMessage",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#5B9FD7",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "the content of the message intended for the assignee.",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T11:37:19.000Z",
+      "updatedAt": "2025-06-05T11:37:19.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "6841cee5ac02b1dd9a5f17ae",
+      "name": "vf_client",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#5B9FD7",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T17:07:50.000Z",
+      "updatedAt": "2025-06-05T17:07:50.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "6841cf18ac02b1dd9a5f17f5",
+      "name": "vf_task",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#5B9FD7",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T17:08:41.000Z",
+      "updatedAt": "2025-06-05T17:08:41.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "6841e90216b014641261bef7",
+      "name": "followup_return",
+      "createdByID": 1009891,
+      "folderID": null,
+      "color": "#ce80cc",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T18:59:14.000Z",
+      "updatedAt": "2025-06-05T18:59:14.000Z",
+      "updatedByID": 1009891
+    }
+  ],
+  "workflows": [
+    {
+      "id": "66df755be937eb000784abb2",
+      "name": "Start workflow",
+      "createdByID": 1009891,
+      "folderID": null,
+      "status": null,
+      "isStart": true,
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "assigneeID": null,
+      "description": "",
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-06-10T21:16:27.000Z",
+      "updatedByID": 1009891
+    }
+  ],
+  "attachments": [],
+  "cardButtons": [],
+  "prompts": [],
+  "promptMessages": [],
+  "events": [],
+  "agents": [
+    {
+      "id": "67db2b56cbe88befffef4623",
+      "name": "Task Query Agent",
+      "createdByID": 1009891,
+      "folderID": null,
+      "settings": {
+        "model": "gpt-4o",
+        "maxTokens": 512,
+        "temperature": 0.3
+      },
+      "description": "This agent helps users check the status of tasks related to specific clients. It captures natural-language questions and sends them to an automation system (Make) to retrieve structured answers.",
+      "instructions": [
+        {
+          "text": [
+            "Your role is to handle task-related questions by forwarding them to an external system.\r\n\r\nGreet the guest and ask which task they are inquiring about."
+          ]
+        },
+        {
+          "text": [
+            "When the guest sends a message:\r\n1. Save their full input in the variable ",
+            {
+              "variableID": "683868fbfec05eb67a75cd4d"
+            },
+            " \r\n2. Do not answer or summarize the question yourself.\r\n3. Immediately call the tool post_chat_input, sending chatInput\r\n4. Respond with the return of ",
+            {
+              "variableID": "6840934ba1577b62095d0372"
+            },
+            " "
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "5. When responsible for responding to user questions about tasks,"
+          ]
+        },
+        {
+          "text": [
+            "Do not ask to contact the assignee after every response.\nOnly suggest following up when it makes contextual sense, such as:\nThe task is incomplete, overdue, or marked as blocked\nThe user hints at next steps, frustration, or needing action taken\n\nIf you do offer to follow up, use natural language based on the situation.\nAvoid repeating the offer too often in a single conversation.\nOnly offer it once per interaction unless clearly re-prompted by the user.\n\nIf the user agrees to follow up:\nSet ",
+            {
+              "variableID": "6840ad68a1577b62095d137b"
+            },
+            " to true\nActivate the goto_InstructionAgent path"
+          ]
+        },
+        {
+          "text": [
+            "\r\r\nDo not attempt to answer questions directly from your own knowledge."
+          ]
+        }
+      ],
+      "pathToolOrder": [
+        "68386886fec05eb67a75cce2",
+        "6840ac38a1577b62095d131d"
+      ],
+      "webSearchTool": null,
+      "knowledgeBaseTool": {
+        "enabled": false,
+        "description": "Triggered the knowledge base when you don't know the answer to a question."
+      },
+      "buttonTool": null,
+      "cardTool": null,
+      "carouselTool": null,
+      "createdAt": "2025-05-29T11:50:37.000Z",
+      "updatedAt": "2025-06-10T20:57:55.000Z",
+      "updatedByID": 1009891
+    },
+    {
+      "id": "6840ae2aa1577b62095d13af",
+      "name": "Instruction Agent",
+      "createdByID": 1009891,
+      "folderID": null,
+      "settings": {
+        "model": "gpt-4o",
+        "maxTokens": 512,
+        "temperature": 0.3
+      },
+      "description": "Handles user-approved follow-up requests by delivering Slack messages to the assigned team member(s) regarding a specific task or client. Triggered by another agent after task lookup confirmation.",
+      "instructions": [
+        {
+          "text": [
+            "You are responsible for forwarding follow-up instructions to task assignees through an external system (n8n), which handles Slack delivery.\n\rYour role is not to interpret or modify the instruction message—only to relay it."
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "When this agent is activated:\r\n1. Expect the following required variables:\r\n vf_actionType = followup_instruction\n",
+            {
+              "variableID": "6841816e060c885ccc1a0d7f"
+            },
+            ": the content of the message to send"
+          ]
+        },
+        {
+          "text": [
+            "\r",
+            {
+              "variableID": "6841cee5ac02b1dd9a5f17ae"
+            },
+            " : the client regarding this task"
+          ]
+        },
+        {
+          "text": [
+            "",
+            {
+              "variableID": "6841cf18ac02b1dd9a5f17f5"
+            },
+            " : the task which is the focus of this action\n",
+            {
+              "variableID": "68418143060c885ccc1a0d51"
+            },
+            ": the name, group, or Slack handle of the recipient\r\r\n\r2. Immediately call the tool post_instruction using the input variables provided.\r\n\r\n\rStrict Rules:\nDo not modify, analyze, or interpret the message content.\nDo not answer unrelated questions or respond from your own knowledge.\nDo not initiate new tasks, lookups, or actions beyond this message dispatch."
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                {
+                  "text": [
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "text": [
+                "Post-Instruction Wrap-Up\nAfter ",
+                {
+                  "variableID": "6841e90216b014641261bef7"
+                },
+                " confirms the message was delivered, acknowledge the action in a conversational tone. Then, if it feels appropriate, offer to help with another task.\nIf the user shows interest in continuing, follow the returnto_taskQueryAgent path.\nIf not, politely end the conversation."
+              ]
+            }
+          ]
+        }
+      ],
+      "pathToolOrder": [
+        "6840b5a9a1577b62095d18f6",
+        "684591bd21aa636e4516f42e"
+      ],
+      "webSearchTool": null,
+      "knowledgeBaseTool": {
+        "enabled": false,
+        "description": "Trigger the knowledge base when you don't know the answer to a question."
+      },
+      "buttonTool": null,
+      "cardTool": null,
+      "carouselTool": null,
+      "createdAt": "2025-06-04T20:35:54.000Z",
+      "updatedAt": "2025-06-10T21:14:25.000Z",
+      "updatedByID": 1009891
+    }
+  ],
+  "agentAPITools": [],
+  "agentPathTools": [
+    {
+      "id": "68386886fec05eb67a75cce2",
+      "name": "post_chatInput",
+      "agentID": "67db2b56cbe88befffef4623",
+      "description": "chatInput has been defined and ready to post",
+      "variableOrder": [
+        "683868fbfec05eb67a75cd4e"
+      ],
+      "createdAt": "2025-05-29T14:00:39.000Z"
+    },
+    {
+      "id": "6840ac38a1577b62095d131d",
+      "name": "goto_InstructionAgent",
+      "agentID": "67db2b56cbe88befffef4623",
+      "description": "this path allows the user to alert the assignee(s) of the action via slack",
+      "variableOrder": [
+        "6840ad69a1577b62095d137c"
+      ],
+      "createdAt": "2025-06-04T20:27:37.000Z"
+    },
+    {
+      "id": "6840b5a9a1577b62095d18f6",
+      "name": "post_instruction",
+      "agentID": "6840ae2aa1577b62095d13af",
+      "description": "This path is triggered when vf_actionType is set to followup_instruction.\n\nRequired Variables:\n\nvf_followupTarget: the name or ID of the task assignee (or group) receiving the instruction.\n\nvf_followupMessage: the content of the message intended for the assignee.\n\nInstructions:\nEnsure both variables are populated before calling the webhook. The payload will be sent to n8n for further processing, where it will be formatted and delivered to the appropriate Slack channel or user.",
+      "variableOrder": [
+        "68418143060c885ccc1a0d52",
+        "6841816e060c885ccc1a0d80",
+        "6841cee5ac02b1dd9a5f17af",
+        "6841cf19ac02b1dd9a5f17f6"
+      ],
+      "createdAt": "2025-06-04T21:07:54.000Z"
+    },
+    {
+      "id": "684591bd21aa636e4516f42e",
+      "name": "returnto_taskQueryAgent",
+      "agentID": "6840ae2aa1577b62095d13af",
+      "description": "the guest wants to inquire about another task",
+      "variableOrder": [],
+      "createdAt": "2025-06-08T13:35:58.000Z"
+    }
+  ],
+  "agentFunctionTools": [],
+  "agentIntegrationTools": [],
+  "agentPathToolVariables": [
+    {
+      "id": "683868fbfec05eb67a75cd4e",
+      "kind": "variable",
+      "entityID": null,
+      "variableID": "683868fbfec05eb67a75cd4d",
+      "description": null,
+      "agentPathToolID": "68386886fec05eb67a75cce2",
+      "createdAt": "2025-05-29T14:02:36.000Z"
+    },
+    {
+      "id": "6840ad69a1577b62095d137c",
+      "kind": "variable",
+      "entityID": null,
+      "variableID": "6840ad68a1577b62095d137b",
+      "description": null,
+      "agentPathToolID": "6840ac38a1577b62095d131d",
+      "createdAt": "2025-06-04T20:32:41.000Z"
+    },
+    {
+      "id": "68418143060c885ccc1a0d52",
+      "kind": "variable",
+      "entityID": null,
+      "variableID": "68418143060c885ccc1a0d51",
+      "description": "the name or ID of the task assignee (or group) receiving the instruction.",
+      "agentPathToolID": "6840b5a9a1577b62095d18f6",
+      "createdAt": "2025-06-05T11:36:36.000Z"
+    },
+    {
+      "id": "6841816e060c885ccc1a0d80",
+      "kind": "variable",
+      "entityID": null,
+      "variableID": "6841816e060c885ccc1a0d7f",
+      "description": null,
+      "agentPathToolID": "6840b5a9a1577b62095d18f6",
+      "createdAt": "2025-06-05T11:37:19.000Z"
+    },
+    {
+      "id": "6841cee5ac02b1dd9a5f17af",
+      "kind": "variable",
+      "entityID": null,
+      "variableID": "6841cee5ac02b1dd9a5f17ae",
+      "description": "the name of the client regarding this task",
+      "agentPathToolID": "6840b5a9a1577b62095d18f6",
+      "createdAt": "2025-06-05T17:07:50.000Z"
+    },
+    {
+      "id": "6841cf19ac02b1dd9a5f17f6",
+      "kind": "variable",
+      "entityID": null,
+      "variableID": "6841cf18ac02b1dd9a5f17f5",
+      "description": "the task which is the focus of this action",
+      "agentPathToolID": "6840b5a9a1577b62095d18f6",
+      "createdAt": "2025-06-05T17:08:41.000Z"
+    }
+  ],
+  "apiTools": [
+    {
+      "id": "68459d5721aa636e4516f9b6",
+      "name": "Untitled API",
+      "createdByID": 1009891,
+      "folderID": null,
+      "url": null,
+      "body": null,
+      "image": null,
+      "headers": [],
+      "httpMethod": "get",
+      "description": null,
+      "queryParameters": [],
+      "createdAt": "2025-06-08T14:25:28.000Z",
+      "updatedAt": "2025-06-08T14:25:28.000Z",
+      "updatedByID": 1009891
+    }
+  ],
+  "apiToolInputVariables": [],
+  "integrationTools": [],
+  "functions": [],
+  "functionPaths": [],
+  "functionVariables": [],
+  "project": {
+    "type": "chat",
+    "name": "StatusLookup",
+    "image": "https://cm4-production-assets.s3.amazonaws.com/1729190521409-square-onyx-1024.jpg",
+    "teamID": "eMjGoOxejB",
+    "members": [],
+    "platform": "webchat",
+    "_version": 1.2,
+    "linkType": "STRAIGHT",
+    "creatorID": 1009891,
+    "updatedBy": 1009891,
+    "platformData": {
+      "invocationName": "template project general"
+    },
+    "customThemes": [
+      {
+        "name": "purple",
+        "palette": {
+          "50": "#f6eaf6",
+          "100": "#f1dcf0",
+          "200": "#eacbe9",
+          "300": "#e3b9e2",
+          "400": "#d99dd7",
+          "500": "#ce80cc",
+          "600": "#b766b5",
+          "700": "#915090",
+          "800": "#6b3969",
+          "900": "#432242"
+        },
+        "standardColor": "#ce80cc"
+      },
+      {
+        "name": "Gray",
+        "palette": {
+          "50": "#e7eff6",
+          "100": "#d6e4f1",
+          "200": "#c1d7ea",
+          "300": "#abcbe4",
+          "400": "#86b6d9",
+          "500": "#75a0bf",
+          "600": "#6388a2",
+          "700": "#4d6c81",
+          "800": "#374e5e",
+          "900": "#21303b"
+        },
+        "standardColor": "#75a0bf"
+      }
+    ],
+    "aiAssistSettings": {
+      "aiPlayground": true
+    },
+    "privacy": "private",
+    "_id": "68384a0c4e4dc0e4ff1c6a2f",
+    "updatedAt": "2025-06-10T13:42:38.218Z",
+    "devVersion": "68384a0c4e4dc0e4ff1c6a30",
+    "liveVersion": "68384a0c4e4dc0e4ff1c6a31"
+  },
+  "_version": "1.2",
+  "secrets": [],
+  "variableStates": []
+}
